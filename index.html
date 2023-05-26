@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <!--網頁字體-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--網頁視窗大小可調性, 且預設1.0倍率-->
+    <meta name="description" content="Oberon0823" />
+    <!--網頁大綱-->
+    <title> </title>
+    <!--網頁標題-->
+    <link rel="stylesheet" href="./style/main.css" />
+    <!--使用CSS-->
+    <link rel="stylesheet" href="./dist/assets/owl.carousel.min.css" />
+    <!--使用輪播CSS-->
+    <link rel="stylesheet" href="./dist/assets/owl.theme.default.css" />
+    <!--使用輪播CSS-->
+  </head>
+  <body>
+    <input type="checkbox" name="" id="menu-switch" />
+    <header class="main-header" id="Main-Header">
+      <div class="logo" id="Logo">
+        <!--左半部Logo-->
+        <img src="./img/logo.jpg" alt="logo" />
+        <h1>Lounge__Pastry</h1>
+      </div>
+
+      <label class="hb" id="HB" for="menu-switch">
+        <!--漢堡-->
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="main-nav" id="Main-Nav">
+        <!--副標題和選單-->
+        <ul>
+          <li><a href="#">首頁</a></li>
+          <li><a href="#">商品一覽</a></li>
+          <li><a href="#">關於我們</a></li>
+          <li><a href="#">聯絡我們</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!--大標題-->
+
+    <main>
+      <!--內容-->
+      <section class="page01" id="Page01">
+        <div class="back"></div>
+        <h2 class="txt">用平凡的甜點</h2>
+        <h2 class="txt">讓心可以停留片刻</h2>
+        <button class="start">立即享用</button>
+      </section>
+
+      <section class="page02">
+        <div class="Page02_txt">
+          <h2>商品一覽</h2>
+        </div>
+        <div class="Page02_Cards owl-carousel owl-theme myCarousel">
+          <div class="Page02_Card">
+            <img src="./desert/basque巴斯克/basque coffee s.jpg" alt="" />
+            <div class="Page02_Card_txt">
+              <h3>巴斯克</h3>
+              <p>淋漓盡致地梅納反應</p>
+              <p>造就陣陣焦香</p>
+              <p>隨之而來的各式風味層層堆疊</p>
+              <p>入口香濃而留香的乳酸味</p>
+              <p>搭配著質地酥脆的沙布蕾酥餅</p>
+              <p>在口齒間肆意綻放</p>
+              <p>是為一大味覺饗宴</p>
+            </div>
+          </div>
+          <div class="Page02_Card">
+            <img src="./desert/brownie布朗尼/brownie01 s.jpg" alt="" />
+            <div class="Page02_Card_txt">
+              <h3>布朗尼</h3>
+              <p>鼻腔的白蘭地</p>
+              <p>由橡木桶的時光牽引著果香</p>
+              <p>嗅覺伏筆下</p>
+              <p>恰似75%苦中帶甜的濕潤</p>
+              <p>味覺中</p>
+              <p>留下一抹香滑順口</p>
+            </div>
+          </div>
+          <div class="Page02_Card">
+            <img src="./desert/canele可麗露/c01 s.jpeg" alt="" />
+            <div class="Page02_Card_txt">
+              <h3>可麗露</h3>
+              <p>源自法國西南部波爾多的可麗露</p>
+              <p>濃濃酒香中伴隨著香草芳香</p>
+              <p>再經過近百次的反覆調整及改良</p>
+              <p>使可麗露</p>
+              <p>有著焦糖般的外殼</p>
+              <p>以及蜂巢狀的內層</p>
+              <p>口感上則是香脆可口及濕潤Q彈</p>
+            </div>
+          </div>
+          <div class="Page02_Card">
+            <img src="./desert/madeleine瑪德蓮/m02 s.jpg" alt="" />
+            <div class="Page02_Card_txt">
+              <h3>瑪德蓮</h3>
+              <p>烤盤上失落的貝殼是衝突的禮物</p>
+              <p>高溫與冰冷</p>
+              <p>嚥下</p>
+              <p>鬆軟適口的綿密</p>
+              <p>交織不同滋味在口腔蔓延</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="./dist/owl.carousel.min.js"></script>
+    <script>
+      let A = document.querySelector(".page01");
+      let B = document.querySelector("#menu-switch");
+      A.addEventListener("click", () => {
+        B.style.display = "none";
+      });
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          //loop: true /*循環播放*/,
+          //center: true /*使最左右兩側元素只出現半張: 底下item必須設定偶數*/,
+          //margin: 10,
+          responsiveClass: true /**/,
+          stagePadding: 50,
+          loop: true,
+          margin: 20,
+          nav: true,
+          responsive: {
+            /**/
+            0: {
+              items: 1,
+              nav: true /*箭頭顯示*/,
+            },
+            768: {
+              items: 2,
+              nav: false,
+            },
+            1024: {
+              items: 4,
+              nav: false,
+            },
+            1200: {
+              items: 4,
+              nav: true,
+              loop: false,
+            },
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
