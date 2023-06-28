@@ -1,0 +1,236 @@
+@charset "UTF-8";
+* {
+  padding: 0; /*所有內容貼齊邊框, 以利後續排版*/
+  margin: 0;
+}
+
+body #menu-switch {
+  /*雖然被隱藏, 但功能依然還在*/
+  /*功能在#menu-switch:checked + .main-header .main-nav*/
+  display: none;
+}
+body #menu-switch:checked + .main-header .main-nav {
+  display: block;
+}
+body #Page01:active .main-nav {
+  display: none;
+}
+body .main-header {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  background-color: rgb(243, 215, 164);
+  position: fixed;
+  z-index: 3;
+}
+body .main-header .logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px;
+  width: 60%;
+}
+body .main-header .logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+body .main-header .logo h1 {
+  font-size: 20px;
+}
+body section.page01 {
+  width: 100%;
+  height: calc(100vh - 80px); /*扣掉header高度: 40(header) +  padding(10px *2)*/
+  background-image: url("../img/m01.JPG");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 80px;
+  left: 0px;
+}
+body section.page01 .back {
+  width: 100%;
+  height: calc(100vh - 80px);
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute; /*避免文字因濾鏡而移動到背景最底下*/
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+}
+body section.page01 h2.txt {
+  color: white;
+  z-index: 2;
+  margin-bottom: 5px;
+}
+body section.page01 button.start {
+  z-index: 2;
+  width: 100px;
+  height: 50px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 15px;
+  background-color: wheat;
+}
+body section.page02 {
+  width: 100vw;
+  height: calc(100vh - 80px);
+  background-color: white;
+  position: relative;
+  top: 80px;
+  text-align: center;
+}
+body section.page02 .Page02_txt {
+  width: 100vw;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body section.page02 .Page02_txt h2 {
+  font-size: 28px;
+}
+body section.page02 .Page02_Cards {
+  height: calc(100vh - 160px);
+}
+body section.page02 .Page02_Cards .Page02_Card {
+  height: calc(100vh - 200px);
+  background-color: rgba(245, 222, 179, 0.9);
+  border-radius: 20px;
+  box-shadow: 5px 0px 3px 0px rgba(0, 0, 0, 0.5);
+}
+body section.page02 .Page02_Cards .Page02_Card img {
+  border-radius: 20px 20px 0px 0px;
+}
+body section.page02 .Page02_Cards .Page02_Card .Page02_Card_txt {
+  padding: 20px;
+}
+body section.page02 .Page02_Cards .Page02_Card .Page02_Card_txt h3 {
+  font-size: 24px;
+  padding-bottom: 10px;
+  margin: 15px;
+  border-bottom: 1px solid #000;
+}
+body section.page02 .Page02_Cards .Page02_Card .Page02_Card_txt p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+@media screen and (max-width: 767px) {
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 50%;
+  }
+  .main-nav ul {
+    width: 150px;
+    background-color: rgb(241, 241, 241);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+  }
+  .main-nav ul li {
+    list-style-type: none;
+    margin: 15px 0 15px 0;
+  }
+  .main-nav ul li a {
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+  }
+  .hb {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #ad8961;
+    display: flex; /*白線位置設置*/
+    flex-direction: column; /*白線位置設置*/
+    justify-content: space-evenly; /*白線位置設置*/
+    align-items: center; /*白線位置設置*/
+  }
+  .hb span {
+    width: 80%;
+    height: 4px;
+    background-color: #fff;
+  }
+  .myCarousel {
+    max-width: 960px;
+  }
+  .owl-carousel .owl-nav button.owl-prev {
+    position: absolute;
+    top: 175px;
+    left: 0;
+    bottom: 0;
+  }
+  .owl-carousel .owl-nav button.owl-next {
+    position: absolute;
+    top: 175px;
+    right: 0;
+    bottom: 0;
+  }
+  .owl-carousel .owl-nav button.owl-prev, .owl-next {
+    width: 40px;
+    height: 80px;
+    font-size: 2rem;
+    opacity: 0;
+    margin: 0;
+    padding: 0 20px !important;
+  }
+  .owl-carousel .owl-nav button.owl-prev span, .owl-next span {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #Main-Header {
+    /*因前面#menu-switch:checked + .main-header .main-nav*/
+    height: 100px;
+  }
+  .main-nav {
+    width: 60%;
+    display: flex;
+    align-items: center;
+  }
+  .main-nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .main-nav ul li {
+    list-style-type: none;
+  }
+  .main-nav ul li a {
+    color: #000;
+    text-decoration: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #Logo img {
+    width: 75px;
+    height: 75px;
+    border-radius: 60px;
+    margin-right: 25px;
+  }
+  #Logo h1 {
+    font-size: 24px;
+  }
+  #Main-Nav ul li a {
+    font-size: 18px;
+  }
+  #Page01 .txt {
+    font-size: 32px;
+  }
+  #Page01 button.start {
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=main.css.map */
