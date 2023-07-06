@@ -28,7 +28,7 @@ body .main-header .logo {
   justify-content: flex-start;
   align-items: center;
   padding: 10px;
-  width: 60%;
+  width: 49%;
 }
 body .main-header .logo img {
   width: 50px;
@@ -95,10 +95,11 @@ body section.page02 .Page02_txt h2 {
   font-size: 28px;
 }
 body section.page02 .Page02_Cards {
-  height: calc(100vh - 160px);
+  width: 100vw;
+  height: calc(100vh - 204px);
 }
 body section.page02 .Page02_Cards .Page02_Card {
-  height: calc(100vh - 200px);
+  height: calc(100vh - 204px);
   background-color: rgba(245, 222, 179, 0.9);
   border-radius: 20px;
   box-shadow: 5px 0px 3px 0px rgba(0, 0, 0, 0.5);
@@ -197,7 +198,7 @@ body section.page02 .Page02_Cards .Page02_Card .Page02_Card_txt p {
     height: 100px;
   }
   .main-nav {
-    width: 60%;
+    width: 50%;
     display: flex;
     align-items: center;
   }

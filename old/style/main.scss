@@ -29,7 +29,7 @@ body {
       justify-content: flex-start;
       align-items: center;
       padding: 10px;
-      width: 60%;
+      width: 49%;
       img {
         width: 50px;
         height: 50px;
@@ -104,9 +104,10 @@ body {
       }
     }
     .Page02_Cards {
-      height: calc(100vh - 160px);
+      width: 100vw;
+      height: calc(100vh - 204px);
       .Page02_Card {
-        height: calc(100vh - 200px);
+        height: calc(100vh - 204px);
         background-color: rgba(245, 222, 179, 0.9);
         border-radius: 20px;
         box-shadow: 5px 0px 3px 0px rgba(0, 0, 0, 0.5); //(x軸移動量/Y軸移動量/陰影面積/顏色)
@@ -181,7 +182,6 @@ body {
   }
 
   ///////////////////////////////////////////////////////
-
   .myCarousel {
     max-width: 960px;
     // margin-top: 15px;
@@ -216,7 +216,6 @@ body {
     }
   }
 }
-
 @media screen and (min-width: 768px) {
   //大於768時
   #Main-Header {
@@ -224,7 +223,7 @@ body {
     height: 100px; //因此改用id呼叫
   }
   .main-nav {
-    width: 60%;
+    width: 50%;
     //background-color: orange;///
     display: flex;
     align-items: center;
@@ -242,15 +241,7 @@ body {
       }
     }
   }
-  //   #Page01 {
-  //     //調整底部
-  //     height: calc(100vh - 100px);
-  //     .back {
-  //       height: calc(100vh - 100px);
-  //     }
-  //   }
 }
-
 @media screen and (min-width: 1024px) {
   #Logo {
     img {
